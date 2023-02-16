@@ -1,16 +1,26 @@
+import { Axios } from 'axios';
 import React, { FormEvent, useState } from 'react';
 import { ImLinkedin2 } from "react-icons/im";
 import { ImTwitter } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
 import Map from '../assets/map.svg';
+import { createContact } from '../services/contact';
 
 export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const validateForm = (e: FormEvent) => {
+    const validateForm = async (e: FormEvent) => {
         e.preventDefault();
+        const response = await createContact({ name, email, message });
+        
+        if (response == 201) {
+            alert('feedback sent successfully!');
+        } else {
+            alert('Error: something went wrong');
+        }
+
     }
 
     return (
