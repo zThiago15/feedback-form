@@ -1,4 +1,3 @@
-import { Axios } from 'axios';
 import React, { FormEvent, useState } from 'react';
 import { ImLinkedin2 } from "react-icons/im";
 import { ImTwitter } from "react-icons/im";
