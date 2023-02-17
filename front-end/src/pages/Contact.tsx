@@ -5,6 +5,7 @@ import { ImInstagram } from "react-icons/im";
 import Map from '../assets/map.svg';
 import { createContact } from '../services/contact';
 import { StyledButton } from '../styles/button.style';
+import { StyledForm } from '../styles/form.style';
 import { StyledMap } from '../styles/map.style';
 
 export default function Contact() {
@@ -31,7 +32,11 @@ export default function Contact() {
         <>
             <main>
                 <h1>Reach out to us!</h1>
-                <form method="POST" onSubmit={(e) => validateForm(e)}>
+                <StyledForm
+                    method="POST" 
+                    onSubmit={(e: FormEvent) => validateForm(e)}
+
+                >
                     <input 
                         placeholder="Your name*" 
                         value={name} onChange={({ target }) => setName(target.value)} 
@@ -49,7 +54,7 @@ export default function Contact() {
                         required
                     ></textarea>
                     <StyledButton type="submit" disabled={disableBtn}>Send message</StyledButton>
-                </form>
+                </StyledForm>
                 <StyledMap src={Map} alt="map" />
             </main>
             <footer>

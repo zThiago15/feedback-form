@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { GlobalStyle } from "./styles/Globa";
+import './index.css'
 import { theme } from "./styles/Theme";
 
 const root = ReactDOM.createRoot(
@@ -14,7 +14,6 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
         <App />
       </ThemeProvider>
     </BrowserRouter>
