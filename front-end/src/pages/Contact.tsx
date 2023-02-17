@@ -6,6 +6,7 @@ import Map from '../assets/map.svg';
 import { createContact } from '../services/contact';
 
 import { StyledButton } from '../styles/button.style';
+import { StyledFooter } from '../styles/footer.style';
 import { StyledForm } from '../styles/form.style';
 import { StyledInput, StyledTextarea } from '../styles/formFields.style';
 import { StyledHeading } from '../styles/heading.style';
@@ -38,7 +39,6 @@ export default function Contact() {
                 <StyledForm
                     method="POST" 
                     onSubmit={(e: FormEvent) => validateForm(e)}
-
                 >
                     <StyledInput 
                         placeholder="Your name*" 
@@ -60,11 +60,11 @@ export default function Contact() {
                 </StyledForm>
                 <StyledMap src={Map} alt="map" />
             </main>
-            <footer>
-                <ImLinkedin2 />
-                <ImTwitter />
-                <ImInstagram />
-            </footer>
+            <StyledFooter>
+                <ImLinkedin2 width={`50px`} color="#696969" />
+                <ImTwitter width={`50px`} color="#696969" />
+                <ImInstagram width={`50px`} color="#696969" />
+            </StyledFooter>
         </>
     );
 }
