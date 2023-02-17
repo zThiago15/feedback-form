@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from "express";
+import FeedbackService from "../services/feedbackService";
 
 export default class FeedbackController {
     constructor(private feedbackService = new FeedbackService()) { }
