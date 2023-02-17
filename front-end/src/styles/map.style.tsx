@@ -6,5 +6,5 @@ export const StyledMap = styled.img`
   width: 20em;
 
   top: 10em;
-  left: 15em;
+  right: 0;
 `;

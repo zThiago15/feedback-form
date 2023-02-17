@@ -2,7 +2,12 @@ import React, { FormEvent, useState } from 'react';
 import { ImLinkedin2 } from "react-icons/im";
 import { ImTwitter } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
+
 import Map from '../assets/map.svg';
+import greenCartoon from '../assets/greenCartoon.svg';
+import pinkCartoon from '../assets/pinkCartoon.svg';
+import yellowCartoon from '../assets/yellowCartoon.svg';
+
 import { createContact } from '../services/contact';
 
 import { StyledButton } from '../styles/button.style';
@@ -11,6 +16,7 @@ import { StyledForm } from '../styles/form.style';
 import { StyledInput, StyledTextarea } from '../styles/formFields.style';
 import { StyledHeading } from '../styles/heading.style';
 import { StyledMap } from '../styles/map.style';
+import { StyledCartoon } from '../styles/cartoon.style';
 
 export default function Contact() {
     const [name, setName] = useState('');
@@ -34,6 +40,7 @@ export default function Contact() {
 
     return (
         <>
+            <StyledCartoon src={greenCartoon} alt="green cartoon" />
             <main>
                 <StyledHeading>Reach out to us!</StyledHeading>
                 <StyledForm
