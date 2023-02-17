@@ -4,6 +4,8 @@ import { ImTwitter } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
 import Map from '../assets/map.svg';
 import { createContact } from '../services/contact';
+import { StyledButton } from '../styles/button.style';
+import { StyledMap } from '../styles/map.style';
 
 export default function Contact() {
     const [name, setName] = useState('');
@@ -43,9 +45,9 @@ export default function Contact() {
                         onChange={({ target }) => setMessage(target.value)} 
                         required
                     ></textarea>
-                    
-                    <button type="submit">Send message</button>
+                    <StyledButton type="submit">Send message</StyledButton>
                 </form>
+                <StyledMap src={Map} alt="map" />
             </main>
             <img width="20px" src={Map} alt="map " />
             <footer>

@@ -3,5 +3,6 @@ export const theme = {
         darkgray: '#3E3E3E',
         gray: '#696969',
         lightgray: '#DCDCDC',
+        yellow: '#FAD34F'
     }
 }
