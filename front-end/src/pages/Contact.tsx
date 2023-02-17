@@ -16,7 +16,7 @@ import { StyledForm } from '../styles/form.style';
 import { StyledInput, StyledTextarea } from '../styles/formFields.style';
 import { StyledHeading } from '../styles/heading.style';
 import { StyledMap } from '../styles/map.style';
-import { StyledGreenCartoon, StyledPinkCartoon } from '../styles/cartoon.style';
+import { StyledGreenCartoon, StyledPinkCartoon, StyledYellowCartoon } from '../styles/cartoon.style';
 
 export default function Contact() {
     const [name, setName] = useState('');
@@ -67,6 +67,7 @@ export default function Contact() {
                 </StyledForm>
                 <StyledMap src={Map} alt="map" />
                 <StyledPinkCartoon src={pinkCartoon} alt="pink cartoon" />
+                <StyledYellowCartoon src={yellowCartoon} alt="yellow cartoon" />
 
             </main>
             <StyledFooter>

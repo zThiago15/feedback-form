@@ -18,8 +18,8 @@ export const StyledPinkCartoon = styled.img`
 
 export const StyledYellowCartoon = styled.img`
     position: absolute;
-    top: 6.5em;
-    right: 2em;
+    left: 0;
+    top: 10em;
 
-    width: 3em;
+    width: 5em;
 `;
