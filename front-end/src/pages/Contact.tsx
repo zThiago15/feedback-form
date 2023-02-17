@@ -16,7 +16,7 @@ import { StyledForm } from '../styles/form.style';
 import { StyledInput, StyledTextarea } from '../styles/formFields.style';
 import { StyledHeading } from '../styles/heading.style';
 import { StyledMap } from '../styles/map.style';
-import { StyledCartoon } from '../styles/cartoon.style';
+import { StyledGreenCartoon, StyledPinkCartoon } from '../styles/cartoon.style';
 
 export default function Contact() {
     const [name, setName] = useState('');
@@ -40,7 +40,7 @@ export default function Contact() {
 
     return (
         <>
-            <StyledCartoon src={greenCartoon} alt="green cartoon" />
+            <StyledGreenCartoon src={greenCartoon} alt="green cartoon" />
             <main>
                 <StyledHeading>Reach out to us!</StyledHeading>
                 <StyledForm
@@ -66,11 +66,14 @@ export default function Contact() {
                     <StyledButton type="submit" disabled={disableBtn}>Send message</StyledButton>
                 </StyledForm>
                 <StyledMap src={Map} alt="map" />
+                <StyledPinkCartoon src={pinkCartoon} alt="pink cartoon" />
+
             </main>
             <StyledFooter>
                 <ImLinkedin2 width={`50px`} color="#696969" />
                 <ImTwitter width={`50px`} color="#696969" />
                 <ImInstagram width={`50px`} color="#696969" />
+
             </StyledFooter>
         </>
     );
