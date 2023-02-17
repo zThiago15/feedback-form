@@ -1,7 +1,7 @@
 import api from '.';
-import { IContact } from '../interfaces/IContact';
+import { IFeedback } from '../interfaces/IFeedback';
 
-export const createContact = async (data: IContact) => {
-    const response = await api.post('/contact', data);
+export const createContact = async (data: IFeedback) => {
+    const response = await api.post('/feedback', data);
     return response.status;
 };

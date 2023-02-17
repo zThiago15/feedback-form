@@ -17,12 +17,15 @@ export default function Contact() {
         const response = await createContact({ name, email, message });
         
         if (response == 201) {
-            alert('feedback sent successfully!');
+            alert('Feedback sent successfully!');
         } else {
             alert('Error: something went wrong');
         }
 
+        location.reload();
     }
+
+    const disableBtn = !name || !email || !message;
 
     return (
         <>
@@ -45,11 +48,10 @@ export default function Contact() {
                         onChange={({ target }) => setMessage(target.value)} 
                         required
                     ></textarea>
-                    <StyledButton type="submit">Send message</StyledButton>
+                    <StyledButton type="submit" disabled={disableBtn}>Send message</StyledButton>
                 </form>
                 <StyledMap src={Map} alt="map" />
             </main>
-            <img width="20px" src={Map} alt="map " />
             <footer>
                 <ImLinkedin2 />
                 <ImTwitter />
