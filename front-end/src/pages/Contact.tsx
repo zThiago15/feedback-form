@@ -2,6 +2,7 @@ import React, { FormEvent, useState } from 'react';
 import { ImLinkedin2 } from "react-icons/im";
 import { ImTwitter } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
+import { ImPinterest2 } from "react-icons/im";
 
 import Map from '../assets/map.svg';
 import greenCartoon from '../assets/greenCartoon.svg';
@@ -17,6 +18,7 @@ import { StyledInput, StyledTextarea } from '../styles/formFields.style';
 import { StyledHeading } from '../styles/heading.style';
 import { StyledMap } from '../styles/map.style';
 import { StyledGreenCartoon, StyledPinkCartoon, StyledYellowCartoon } from '../styles/cartoon.style';
+import { StyledMain } from '../styles/main.style';
 
 export default function Contact() {
     const [name, setName] = useState('');
@@ -41,40 +43,42 @@ export default function Contact() {
     return (
         <>
             <StyledGreenCartoon src={greenCartoon} alt="green cartoon" />
-            <main>
-                <StyledHeading>Reach out to us!</StyledHeading>
-                <StyledForm
-                    method="POST" 
-                    onSubmit={(e: FormEvent) => validateForm(e)}
-                >
-                    <StyledInput 
-                        placeholder="Your name*" 
-                        value={name} onChange={({ target }) => setName(target.value)} 
-                        required
-                    />
-                    <StyledInput
-                        placeholder="Your e-mail*" 
-                        value={email} onChange={({ target }) => setEmail(target.value)} 
-                        required
-                    />
-                    <StyledTextarea 
-                        placeholder="Your message*" 
-                        value={message} 
-                        onChange={({ target }) => setMessage(target.value)} 
-                        required
-                    ></StyledTextarea>
-                    <StyledButton type="submit" disabled={disableBtn}>Send message</StyledButton>
-                </StyledForm>
+            <StyledMain>
+                <span>
+                    <StyledHeading>Reach out to us!</StyledHeading>
+                    <StyledForm
+                        method="POST" 
+                        onSubmit={(e: FormEvent) => validateForm(e)}
+                    >
+                        <StyledInput 
+                            placeholder="Your name*" 
+                            value={name} onChange={({ target }) => setName(target.value)} 
+                            required
+                        />
+                        <StyledInput
+                            placeholder="Your e-mail*" 
+                            value={email} onChange={({ target }) => setEmail(target.value)} 
+                            required
+                        />
+                        <StyledTextarea 
+                            placeholder="Your message*" 
+                            value={message} 
+                            onChange={({ target }) => setMessage(target.value)} 
+                            required
+                        ></StyledTextarea>
+                        <StyledButton type="submit" disabled={disableBtn}>Send message</StyledButton>
+                    </StyledForm>
+                </span>
                 <StyledMap src={Map} alt="map" />
                 <StyledPinkCartoon src={pinkCartoon} alt="pink cartoon" />
                 <StyledYellowCartoon src={yellowCartoon} alt="yellow cartoon" />
 
-            </main>
+            </StyledMain>
             <StyledFooter>
-                <ImLinkedin2 width={`50px`} color="#696969" />
-                <ImTwitter width={`50px`} color="#696969" />
-                <ImInstagram width={`50px`} color="#696969" />
-
+                <ImLinkedin2 size={20} color="#696969" />
+                <ImTwitter size={20} color="#696969" />
+                <ImInstagram size={20} color="#696969" />
+                <ImPinterest2 size={20} color="#696969" />
             </StyledFooter>
         </>
     );

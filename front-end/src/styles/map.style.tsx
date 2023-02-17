@@ -7,4 +7,9 @@ export const StyledMap = styled.img`
 
   top: 10em;
   right: 0;
+  
+  @media screen and (min-width: 1024px){
+        top: 0;
+    }
+
 `;

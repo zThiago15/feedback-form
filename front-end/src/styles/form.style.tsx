@@ -8,5 +8,11 @@ export const StyledForm = styled.form`
     justify-content: space-evenly;
     align-items: center;
 
-    margin: 20px 25%;
+    margin: 20px 10em;
+
+    @media only screen and (max-width: 1024px){
+        main {
+            flex-direction: row;
+        }
+    }
 `;

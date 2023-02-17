@@ -6,8 +6,17 @@ export const StyledInput = styled.input`
   border-radius: 10px;
   width: 100%;
   color: #2D2D2D;
-
   font-size: 18px;
+
+  ::placeholder {
+    color: #2D2D2D;
+    opacity: 1; /* Firefox */
+  }
+
+  @media screen and (min-width: 1024px){
+      width: 30em;
+
+    }
 `;
 
 export const StyledTextarea = styled.textarea`
@@ -17,6 +26,11 @@ export const StyledTextarea = styled.textarea`
   font-size: 18px;
   color: #2D2D2D;
 
+  ::placeholder {
+    color: #2D2D2D;
+    opacity: 1; /* Firefox */
+  }
+
   width: 100%;
   max-width: 100%;
   min-width: 60%;
@@ -24,4 +38,8 @@ export const StyledTextarea = styled.textarea`
   height: 150px;
   max-height: 200px;
   min-height: 150px;
+
+  @media screen and (min-width: 1024px){
+    width: 30em;
+  }
 `;
