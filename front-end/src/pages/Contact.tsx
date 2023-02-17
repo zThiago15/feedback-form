@@ -4,8 +4,11 @@ import { ImTwitter } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
 import Map from '../assets/map.svg';
 import { createContact } from '../services/contact';
+
 import { StyledButton } from '../styles/button.style';
 import { StyledForm } from '../styles/form.style';
+import { StyledInput, StyledTextarea } from '../styles/formFields.style';
+import { StyledHeading } from '../styles/heading.style';
 import { StyledMap } from '../styles/map.style';
 
 export default function Contact() {
@@ -31,28 +34,28 @@ export default function Contact() {
     return (
         <>
             <main>
-                <h1>Reach out to us!</h1>
+                <StyledHeading>Reach out to us!</StyledHeading>
                 <StyledForm
                     method="POST" 
                     onSubmit={(e: FormEvent) => validateForm(e)}
 
                 >
-                    <input 
+                    <StyledInput 
                         placeholder="Your name*" 
                         value={name} onChange={({ target }) => setName(target.value)} 
                         required
                     />
-                    <input
+                    <StyledInput
                         placeholder="Your e-mail*" 
                         value={email} onChange={({ target }) => setEmail(target.value)} 
                         required
                     />
-                    <textarea 
+                    <StyledTextarea 
                         placeholder="Your message*" 
                         value={message} 
                         onChange={({ target }) => setMessage(target.value)} 
                         required
-                    ></textarea>
+                    ></StyledTextarea>
                     <StyledButton type="submit" disabled={disableBtn}>Send message</StyledButton>
                 </StyledForm>
                 <StyledMap src={Map} alt="map" />
