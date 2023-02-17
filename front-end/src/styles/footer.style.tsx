@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
     bottom: 2em;
     left: 2em;
 
-    width: 5em;
+    width: 10em;
     display: flex;
     justify-content: space-evenly
 `;

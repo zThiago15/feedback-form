@@ -18,7 +18,9 @@ export const StyledButton = styled.button`
   }
 
   :disabled {
-    background-color: #EAC64D;
+    :hover {
+      background-color: #EAC64D;
+    }
     cursor: not-allowed;
   }
 `;

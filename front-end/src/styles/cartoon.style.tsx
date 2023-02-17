@@ -6,6 +6,14 @@ export const StyledGreenCartoon = styled.img`
     right: 2em;
 
     width: 3em;
+
+    @media screen and (min-width: 1024px) {
+        width: 5em;
+        top: 4em;
+        right: 19em;
+
+        transform: rotate(295deg);
+    }
 `;
 
 export const StyledPinkCartoon = styled.img`
@@ -22,4 +30,8 @@ export const StyledYellowCartoon = styled.img`
     top: 10em;
 
     width: 5em;
+
+    @media screen and (min-width: 1024px) {
+        width: 10em;
+    }
 `;
