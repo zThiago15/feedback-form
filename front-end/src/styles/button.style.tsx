@@ -6,7 +6,7 @@ export const StyledButton = styled.button`
 
   color: white;
   font-size: 18px;
-  background-color: ${({theme}) => theme.colors.yellow};
+  background-color: #FAD34F;
 
   padding: 15px;
   border: none;
