@@ -2,5 +2,9 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  '^.+\\.(svg|png|jpg|jpeg|gif|webp)$': '<rootDir>/test/imageTransformer.js',
+  moduleNameMapper: {
+    '\\.(svg|jpg|jpeg|png|gif|eot|otf|webp)$':
+      '<rootDir>/__mocks__/fileMock.js',
+    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
+  },
 };
