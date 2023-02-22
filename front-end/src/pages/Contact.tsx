@@ -27,12 +27,13 @@ export default function Contact() {
 
     const validateForm = async (e: FormEvent) => {
         e.preventDefault();
-        const response = await createContact({ name, email, message });
+        
+        const response = await createContact({ name, email, message });        
         
         if (response == 201) {
-            alert('Feedback sent successfully!');
+            window.alert('Feedback sent successfully!');
         } else {
-            alert('Error: something went wrong');
+            window.alert('Error: something went wrong');
         }
 
         location.reload();
