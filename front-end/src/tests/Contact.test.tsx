@@ -1,10 +1,11 @@
 import React from "react";
-import { fireEvent, getByAltText, render, screen } from "@testing-library/react";
+import { fireEvent, getByAltText, render, screen, waitFor } from "@testing-library/react";
 import Contact from "../pages/Contact";
 import { createContact } from '../services/contact';
 
 describe("Contact component", () => {
-  it.only('should render the form and images', () => {
+
+  it('should render the form and images', () => {
     render(<Contact />);
     const nameInput = screen.getByPlaceholderText('Your name*');
     const emailInput = screen.getByPlaceholderText('Your e-mail*');
