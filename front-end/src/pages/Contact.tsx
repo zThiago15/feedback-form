@@ -4,12 +4,16 @@ import { ImTwitter } from "react-icons/im";
 import { ImInstagram } from "react-icons/im";
 import { ImPinterest2 } from "react-icons/im";
 
+import { useDispatch, useSelector } from 'react-redux';
+import { saveEmail, saveFeedback, saveName } from '../redux/contactSlicer';
+import { createContact } from '../services/contact';
+import { RootState } from '../redux/store';
+
 import Map from '../assets/map.svg';
 import greenCartoon from '../assets/greenCartoon.svg';
 import pinkCartoon from '../assets/pinkCartoon.svg';
 import yellowCartoon from '../assets/yellowCartoon.svg';
 
-import { createContact } from '../services/contact';
 
 import { StyledButton } from '../styles/button.style';
 import { StyledFooter } from '../styles/footer.style';
@@ -20,10 +24,13 @@ import { StyledMap } from '../styles/map.style';
 import { StyledGreenCartoon, StyledPinkCartoon, StyledYellowCartoon } from '../styles/cartoon.style';
 import { StyledMain } from '../styles/main.style';
 
+
 export default function Contact() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const dispatch = useDispatch();
+
+    const name = useSelector((state: RootState) => state.contact.name);
+    const email = useSelector((state: RootState) => state.contact.email);
+    const message = useSelector((state: RootState) => state.contact.feedback);
 
     const validateForm = async (e: FormEvent) => {
         e.preventDefault();
@@ -53,18 +60,18 @@ export default function Contact() {
                     >
                         <StyledInput 
                             placeholder="Your name*" 
-                            value={name} onChange={({ target }) => setName(target.value)} 
+                            value={name} onChange={({ target }) => dispatch(saveName(target.value))} 
                             required
                         />
                         <StyledInput
                             placeholder="Your e-mail*" 
-                            value={email} onChange={({ target }) => setEmail(target.value)} 
+                            value={email} onChange={({ target }) => dispatch(saveEmail(target.value))}
                             required
                         />
                         <StyledTextarea 
                             placeholder="Your message*" 
                             value={message} 
-                            onChange={({ target }) => setMessage(target.value)} 
+                            onChange={({ target }) => dispatch(saveFeedback(target.value))}
                             required
                         ></StyledTextarea>
                         <StyledButton type="submit" disabled={disableBtn}>Send message</StyledButton>
