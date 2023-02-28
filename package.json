@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "swagger-json": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

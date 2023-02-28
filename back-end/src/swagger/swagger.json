@@ -1,0 +1,12 @@
+{
+  "swagger": "3.0",
+  "info": {
+    "title": "Feedback API",
+    "version": 1.0,
+    "description": "Service to store feedbacks",
+    "license": {
+      "name": "MIT License",
+      "url": "https://opensource.org/license/mit/"
+    }
+  }
+}
