@@ -23,6 +23,11 @@
               }
             }
           }
+        },
+        "responses": {
+          "201": {
+            "description": "feedback created successfully"
+          }
         }
       }
     }
@@ -34,15 +39,18 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "name of user"
+            "description": "name of user",
+            "example": "John"
           },
           "email": {
             "type": "string",
-            "description": "email of user"
+            "description": "email of user",
+            "example": "johnsmith@gmail.com"
           },
           "message": {
             "type": "string",
-            "description": "feedback of user"
+            "description": "feedback of user",
+            "example": "This service is great!"
           }
         }
       }
