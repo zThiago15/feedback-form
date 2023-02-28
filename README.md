@@ -21,9 +21,19 @@ Este é um projeto fullstack de um caso que consiste em um formulário de feedba
     - Express
     - ESLint
     - Postgresql
+    - Swagger
+
+---
 
 # Funcionalidades 📝
     Formulário de feedback com validação dos campos Envio dos dados do formulário por meio de um HTTP Request do tipo POST. Armazenamento dos dados no banco de dados Postgresql.
+
+---
+
+# Documentação 📝
+Acesse a documentação da API Rest de feedbacks clicando [aqui](https://feedbackform-back.up.railway.app/api-docs)
+
+---
 
 #  Como Executar a Aplicação 💻
 Acesse o front-end e back-end nos links abaixo:

@@ -24,9 +24,12 @@ This is a fullstack project consisting of a feedback form. The application has b
 
 ## Features 📝
 Feedback form with field validation Submission of form data via an HTTP Request of type POST. Data storage in Postgresql database.
-
 ---
 
+# Documentation 📝
+Acess the documentation of the API Rest of feedbacks by clicking [here](https://feedbackform-back.up.railway.app/api-docs)
+
+---
 # How to Run the Application 💻
 Access the front-end and back-end in the links below:
 [Front-end](https://feedback-form-gbfa.vercel.app/contact)
