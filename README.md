@@ -26,7 +26,7 @@ Este é um projeto fullstack de um caso que consiste em um formulário de feedba
 ---
 
 # Funcionalidades 📝
-    Formulário de feedback com validação dos campos Envio dos dados do formulário por meio de um HTTP Request do tipo POST. Armazenamento dos dados no banco de dados Postgresql.
+Formulário de feedback com validação dos campos Envio dos dados do formulário por meio de um HTTP Request do tipo POST. Armazenamento dos dados no banco de dados Postgresql.
 
 ---
 
